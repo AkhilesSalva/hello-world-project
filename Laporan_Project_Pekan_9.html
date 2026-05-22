@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Project Pekan 9 - Hello World</title>
+    <!--
+        PETUNJUK: File ini bisa dibuka di browser lalu:
+        1. Ctrl+A (Select All) → Ctrl+C (Copy) → Paste ke Microsoft Word
+        2. Atau buka langsung dengan Microsoft Word (File > Open > pilih file ini)
+        3. Atau Print to PDF dari browser
+    -->
+    <style>
+        @page {
+            size: A4;
+            margin: 2.54cm;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000000;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2.54cm;
+            background: #ffffff;
+        }
+
+        .cover-page {
+            text-align: center;
+            page-break-after: always;
+            padding-top: 5cm;
+        }
+
+        .cover-page h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .cover-page h2 {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .cover-page .subtitle {
+            font-size: 14pt;
+            margin-bottom: 5px;
+        }
+
+        .cover-page .line {
+            border-top: 3px solid #000;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .cover-page .info-table {
+            margin: 40px auto;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        .cover-page .info-table td {
+            padding: 5px 15px;
+            font-size: 12pt;
+        }
+
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-top: 24pt;
+            margin-bottom: 12pt;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 18pt;
+            margin-bottom: 10pt;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 12pt;
+            margin-bottom: 8pt;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 10pt;
+            text-indent: 1.27cm;
+        }
+
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        .code-block {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px 16px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 10pt;
+            line-height: 1.4;
+            margin: 10px 0 15px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+
+        .code-inline {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 10pt;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0 15px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        ol, ul {
+            margin-left: 1cm;
+            margin-bottom: 10pt;
+        }
+
+        li {
+            margin-bottom: 5pt;
+        }
+
+        .screenshot-placeholder {
+            border: 2px dashed #999;
+            padding: 40px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+            background: #fafafa;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        .note-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            margin: 10px 0 15px 0;
+            font-style: italic;
+        }
+
+        .step-box {
+            background-color: #e8f4fd;
+            border-left: 4px solid #2196F3;
+            padding: 12px 16px;
+            margin: 10px 0 15px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 10pt;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        @media print {
+            body { padding: 0; }
+            .page-break { page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HALAMAN COVER ==================== -->
+    <div class="cover-page">
+        <br><br>
+        <h1>LAPORAN PROJECT PEKAN 9</h1>
+        <div class="line"></div>
+        <h2>Hello World Project</h2>
+        <p class="subtitle">Pembuatan Source Code Hello World, <br>Commit dan Push ke GitHub</p>
+        
+        <br><br><br>
+
+        <table class="info-table">
+            <tr>
+                <td><strong>Mata Kuliah</strong></td>
+                <td>:</td>
+                <td>[Nama Mata Kuliah]</td>
+            </tr>
+            <tr>
+                <td><strong>Dosen</strong></td>
+                <td>:</td>
+                <td>[Nama Dosen]</td>
+            </tr>
+            <tr>
+                <td><strong>Nama</strong></td>
+                <td>:</td>
+                <td>[Nama Mahasiswa]</td>
+            </tr>
+            <tr>
+                <td><strong>NIM</strong></td>
+                <td>:</td>
+                <td>[NIM Mahasiswa]</td>
+            </tr>
+            <tr>
+                <td><strong>Kelas</strong></td>
+                <td>:</td>
+                <td>[Kelas]</td>
+            </tr>
+            <tr>
+                <td><strong>Tanggal</strong></td>
+                <td>:</td>
+                <td id="tanggal"></td>
+            </tr>
+        </table>
+
+        <br><br><br>
+        <p class="subtitle"><strong>PROGRAM STUDI [NAMA PRODI]</strong></p>
+        <p class="subtitle"><strong>[NAMA UNIVERSITAS]</strong></p>
+        <p class="subtitle"><strong>2026</strong></p>
+    </div>
+
+    <!-- ==================== DAFTAR ISI ==================== -->
+    <h1>DAFTAR ISI</h1>
+    <table style="border: none; width: 100%;">
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;">Cover</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">1</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;">Daftar Isi</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">2</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;"><strong>BAB 1 - Pendahuluan</strong></td>
+            <td style="border: none; text-align: right; padding: 6px 0;">3</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0; padding-left: 20px;">1.1 Latar Belakang</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">3</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0; padding-left: 20px;">1.2 Tujuan</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">3</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;"><strong>BAB 2 - Kebutuhan / Requirement</strong></td>
+            <td style="border: none; text-align: right; padding: 6px 0;">4</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;"><strong>BAB 3 - Instruksi Project</strong></td>
+            <td style="border: none; text-align: right; padding: 6px 0;">5</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0; padding-left: 20px;">3.1 Membuat Project Hello World</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">5</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0; padding-left: 20px;">3.2 Inisialisasi Git Repository</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">7</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0; padding-left: 20px;">3.3 Commit dan Push ke GitHub</td>
+            <td style="border: none; text-align: right; padding: 6px 0;">8</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;"><strong>BAB 4 - Evaluasi</strong></td>
+            <td style="border: none; text-align: right; padding: 6px 0;">10</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none; padding: 6px 0;"><strong>BAB 5 - Kesimpulan</strong></td>
+            <td style="border: none; text-align: right; padding: 6px 0;">11</td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== BAB 1: PENDAHULUAN ==================== -->
+    <h1>BAB 1 - PENDAHULUAN</h1>
+
+    <h2>1.1 Latar Belakang</h2>
+    <p>
+        Dalam dunia pengembangan perangkat lunak modern, penggunaan version control system (VCS) merupakan hal yang sangat penting dan fundamental. Git adalah salah satu version control system yang paling populer dan banyak digunakan oleh developer di seluruh dunia. GitHub, sebagai platform hosting untuk repository Git, menyediakan layanan kolaborasi dan penyimpanan kode secara cloud yang memudahkan pengembang dalam mengelola proyek perangkat lunak mereka.
+    </p>
+    <p>
+        Project Pekan 9 ini bertujuan untuk mempraktikkan pembuatan source code sederhana berupa program "Hello World", kemudian melakukan commit dan push kode tersebut ke akun GitHub. Melalui project ini, mahasiswa diharapkan dapat memahami alur kerja dasar dalam penggunaan Git dan GitHub untuk manajemen source code.
+    </p>
+
+    <h2>1.2 Tujuan</h2>
+    <p class="no-indent">Tujuan dari project ini adalah:</p>
+    <ol>
+        <li>Memahami konsep dasar version control system (Git)</li>
+        <li>Mampu membuat project source code sederhana (Hello World)</li>
+        <li>Mampu melakukan inisialisasi repository Git pada project lokal</li>
+        <li>Mampu melakukan commit perubahan kode ke repository lokal</li>
+        <li>Mampu melakukan push kode dari repository lokal ke GitHub</li>
+        <li>Memahami alur kerja pengembangan perangkat lunak menggunakan Git dan GitHub</li>
+    </ol>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== BAB 2: KEBUTUHAN ==================== -->
+    <h1>BAB 2 - KEBUTUHAN / REQUIREMENT</h1>
+
+    <p>
+        Sebelum memulai project, terdapat beberapa kebutuhan perangkat lunak dan akun yang harus disiapkan terlebih dahulu. Berikut adalah daftar requirement yang diperlukan:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Kebutuhan</th>
+                <th>Deskripsi</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td><strong>Perangkat Lunak Source Code Editor</strong></td>
+                <td>Software untuk menulis dan mengedit kode program. Contoh: Visual Studio Code, Sublime Text, Notepad++, atau editor lainnya.</td>
+                <td style="text-align: center;">✅</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">2</td>
+                <td><strong>Git</strong></td>
+                <td>Version control system yang digunakan untuk melacak perubahan kode. Dapat diunduh dari <span class="code-inline">https://git-scm.com/</span></td>
+                <td style="text-align: center;">✅</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td><strong>Akun GitHub</strong></td>
+                <td>Platform hosting repository Git secara online. Dapat mendaftar di <span class="code-inline">https://github.com/</span></td>
+                <td style="text-align: center;">✅</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2.1 Instalasi Visual Studio Code</h2>
+    <p>
+        Visual Studio Code (VS Code) adalah code editor gratis dan open-source yang dikembangkan oleh Microsoft. VS Code mendukung berbagai bahasa pemrograman dan memiliki banyak extension yang berguna untuk pengembangan perangkat lunak.
+    </p>
+    <div class="step-box">
+        <strong>Langkah-langkah instalasi VS Code:</strong>
+        <ol>
+            <li>Buka browser dan kunjungi <span class="code-inline">https://code.visualstudio.com/</span></li>
+            <li>Klik tombol "Download for Windows"</li>
+            <li>Jalankan file installer yang telah diunduh</li>
+            <li>Ikuti wizard instalasi hingga selesai</li>
+            <li>Buka VS Code untuk memastikan instalasi berhasil</li>
+        </ol>
+    </div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Tampilan VS Code setelah instalasi berhasil]
+    </div>
+
+    <h2>2.2 Instalasi Git</h2>
+    <p>
+        Git adalah version control system terdistribusi yang digunakan untuk melacak perubahan pada source code selama pengembangan perangkat lunak. Git memungkinkan beberapa developer bekerja secara bersamaan pada project yang sama.
+    </p>
+    <div class="step-box">
+        <strong>Langkah-langkah instalasi Git:</strong>
+        <ol>
+            <li>Buka browser dan kunjungi <span class="code-inline">https://git-scm.com/downloads</span></li>
+            <li>Pilih versi yang sesuai dengan sistem operasi (Windows)</li>
+            <li>Unduh dan jalankan file installer</li>
+            <li>Pada proses instalasi, gunakan pengaturan default (Next > Next > Install)</li>
+            <li>Verifikasi instalasi dengan membuka Command Prompt/Terminal dan ketik:</li>
+        </ol>
+    </div>
+    <div class="code-block">$ git --version
+git version 2.45.0.windows.1</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Hasil perintah git --version di terminal]
+    </div>
+
+    <h2>2.3 Membuat Akun GitHub</h2>
+    <p>
+        GitHub adalah platform web-based untuk hosting repository Git. GitHub memungkinkan developer untuk menyimpan, mengelola, dan berbagi kode mereka secara online.
+    </p>
+    <div class="step-box">
+        <strong>Langkah-langkah membuat akun GitHub:</strong>
+        <ol>
+            <li>Buka browser dan kunjungi <span class="code-inline">https://github.com/</span></li>
+            <li>Klik tombol "Sign up"</li>
+            <li>Masukkan email, password, dan username yang diinginkan</li>
+            <li>Verifikasi akun melalui email yang dikirimkan</li>
+            <li>Login ke akun GitHub yang telah dibuat</li>
+        </ol>
+    </div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Halaman profil GitHub Anda]
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== BAB 3: INSTRUKSI PROJECT ==================== -->
+    <h1>BAB 3 - INSTRUKSI PROJECT</h1>
+
+    <h2>3.1 Membuat Project Source Code Hello World</h2>
+    <p>
+        Pada tahap ini, kita akan membuat project Hello World menggunakan HTML, CSS, dan JavaScript. Project ini terdiri dari beberapa file yang saling berkaitan untuk menghasilkan tampilan halaman web yang menampilkan pesan "Hello, World!".
+    </p>
+
+    <h3>3.1.1 Membuat Folder Project</h3>
+    <p>
+        Langkah pertama adalah membuat folder untuk menyimpan file-file project. Buka Terminal/Command Prompt dan jalankan perintah berikut:
+    </p>
+    <div class="code-block">$ mkdir hello-world-project
+$ cd hello-world-project</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Pembuatan folder project di terminal]
+    </div>
+
+    <h3>3.1.2 Membuat File index.html</h3>
+    <p>
+        File <span class="code-inline">index.html</span> adalah file utama yang berisi struktur HTML dari halaman web Hello World. File ini juga memuat styling CSS inline dan me-referensikan file JavaScript eksternal.
+    </p>
+    <p class="no-indent">Buka VS Code, buat file baru bernama <span class="code-inline">index.html</span>, dan tulis kode berikut:</p>
+
+    <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Hello World - Project Pekan 9&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #f093fb, #f5576c, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="greeting"&gt;Hello, World!&lt;/h1&gt;
+        &lt;p id="message"&gt;Selamat datang di Project Pekan 9&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+
+    <p class="no-indent"><strong>Penjelasan kode HTML:</strong></p>
+    <ul>
+        <li><span class="code-inline">&lt;!DOCTYPE html&gt;</span> — Mendeklarasikan tipe dokumen sebagai HTML5</li>
+        <li><span class="code-inline">&lt;html lang="id"&gt;</span> — Tag pembuka HTML dengan atribut bahasa Indonesia</li>
+        <li><span class="code-inline">&lt;head&gt;</span> — Bagian header yang berisi metadata, title, dan CSS</li>
+        <li><span class="code-inline">&lt;style&gt;</span> — CSS untuk styling tampilan dengan efek glassmorphism dan gradient</li>
+        <li><span class="code-inline">&lt;body&gt;</span> — Bagian body yang berisi konten utama halaman</li>
+        <li><span class="code-inline">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span> — Heading utama yang menampilkan pesan "Hello, World!"</li>
+        <li><span class="code-inline">&lt;script src="script.js"&gt;</span> — Me-referensikan file JavaScript eksternal</li>
+    </ul>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Kode index.html di VS Code]
+    </div>
+
+    <h3>3.1.3 Membuat File script.js</h3>
+    <p>
+        File <span class="code-inline">script.js</span> berisi logika JavaScript yang menambahkan fungsionalitas interaktif pada halaman web, seperti menampilkan waktu saat ini dan efek klik pada heading.
+    </p>
+
+    <div class="code-block">// Hello World - Project Pekan 9
+// Script JavaScript untuk menampilkan pesan Hello World
+
+function sayHello() {
+    console.log("Hello, World!");
+    console.log("Project Pekan 9 - Hello World berhasil dijalankan!");
+}
+
+function showCurrentTime() {
+    const now = new Date();
+    const options = { 
+        weekday: 'long', year: 'numeric', 
+        month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    const timeString = now.toLocaleDateString('id-ID', options);
+    
+    const messageEl = document.getElementById('message');
+    if (messageEl) {
+        messageEl.textContent = `Selamat datang! Hari ini: ${timeString}`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    sayHello();
+    showCurrentTime();
+});</div>
+
+    <p class="no-indent"><strong>Penjelasan kode JavaScript:</strong></p>
+    <ul>
+        <li><span class="code-inline">sayHello()</span> — Fungsi untuk mencetak "Hello, World!" ke console browser</li>
+        <li><span class="code-inline">showCurrentTime()</span> — Fungsi untuk menampilkan tanggal dan waktu saat ini dalam format Indonesia</li>
+        <li><span class="code-inline">DOMContentLoaded</span> — Event listener yang menjalankan fungsi-fungsi saat halaman selesai dimuat</li>
+    </ul>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Kode script.js di VS Code]
+    </div>
+
+    <h3>3.1.4 Membuat File README.md</h3>
+    <p>
+        File <span class="code-inline">README.md</span> adalah file dokumentasi project yang ditulis dalam format Markdown. File ini biasanya berisi deskripsi project, cara instalasi, dan cara penggunaan.
+    </p>
+
+    <div class="code-block"># Hello World Project - Pekan 9
+
+Project sederhana Hello World menggunakan HTML, CSS, dan JavaScript.
+
+## Deskripsi
+Project ini dibuat sebagai tugas Pekan 9 untuk mendemonstrasikan 
+pembuatan source code, penggunaan Git, dan push ke GitHub.
+
+## Teknologi yang Digunakan
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+## Cara Menjalankan
+1. Buka file `index.html` di browser
+2. Atau gunakan Live Server extension di VS Code</div>
+
+    <h3>3.1.5 Menjalankan Project</h3>
+    <p>
+        Untuk menjalankan project Hello World, cukup buka file <span class="code-inline">index.html</span> di browser (Google Chrome, Firefox, dll). Hasilnya akan menampilkan halaman web dengan pesan "Hello, World!" dengan desain modern.
+    </p>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Tampilan Hello World di Browser]
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>3.2 Inisialisasi Git Repository</h2>
+    <p>
+        Setelah source code Hello World selesai dibuat, langkah selanjutnya adalah menginisialisasi Git repository pada folder project. Proses ini membuat folder project menjadi sebuah Git repository yang dapat melacak setiap perubahan file.
+    </p>
+
+    <h3>3.2.1 Konfigurasi Git</h3>
+    <p>
+        Sebelum menggunakan Git, kita perlu mengkonfigurasi nama dan email yang akan digunakan untuk setiap commit. Buka terminal dan jalankan perintah berikut:
+    </p>
+    <div class="code-block">$ git config --global user.name "Nama Anda"
+$ git config --global user.email "email@example.com"</div>
+
+    <p class="no-indent"><strong>Penjelasan:</strong></p>
+    <ul>
+        <li><span class="code-inline">git config --global user.name</span> — Mengatur nama pengguna Git secara global</li>
+        <li><span class="code-inline">git config --global user.email</span> — Mengatur email pengguna Git secara global</li>
+    </ul>
+
+    <h3>3.2.2 Inisialisasi Repository</h3>
+    <p>
+        Buka terminal pada folder project <span class="code-inline">hello-world-project</span> dan jalankan perintah berikut:
+    </p>
+    <div class="code-block">$ cd hello-world-project
+$ git init</div>
+    <p>
+        Perintah <span class="code-inline">git init</span> akan membuat subdirektori <span class="code-inline">.git</span> di dalam folder project. Subdirektori ini berisi semua file yang diperlukan oleh Git untuk melacak perubahan.
+    </p>
+
+    <div class="code-block">Initialized empty Git repository in C:/Users/[username]/hello-world-project/.git/</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Hasil perintah git init di terminal]
+    </div>
+
+    <h3>3.2.3 Menambahkan File ke Staging Area</h3>
+    <p>
+        Setelah repository diinisialisasi, kita perlu menambahkan semua file ke staging area menggunakan perintah <span class="code-inline">git add</span>:
+    </p>
+    <div class="code-block">$ git add .
+$ git status</div>
+
+    <p>
+        Perintah <span class="code-inline">git add .</span> menambahkan semua file dalam direktori saat ini ke staging area. Perintah <span class="code-inline">git status</span> digunakan untuk melihat status file yang telah ditambahkan.
+    </p>
+
+    <div class="code-block">On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+        new file:   .gitignore
+        new file:   README.md
+        new file:   index.html
+        new file:   script.js</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Hasil perintah git status di terminal]
+    </div>
+
+    <h3>3.2.4 Melakukan Commit Pertama</h3>
+    <p>
+        Commit adalah proses menyimpan snapshot perubahan ke repository lokal. Jalankan perintah berikut untuk membuat commit pertama:
+    </p>
+    <div class="code-block">$ git commit -m "Initial commit: Hello World project"</div>
+
+    <p>
+        Flag <span class="code-inline">-m</span> digunakan untuk menambahkan pesan commit secara langsung. Pesan commit harus deskriptif agar mudah dipahami.
+    </p>
+
+    <div class="code-block">[main (root-commit) abc1234] Initial commit: Hello World project
+ 4 files changed, 120 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 index.html
+ create mode 100644 script.js</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Hasil perintah git commit di terminal]
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>3.3 Push Project ke GitHub</h2>
+    <p>
+        Setelah melakukan commit di repository lokal, langkah selanjutnya adalah push (mengunggah) kode ke GitHub agar tersimpan secara online dan dapat diakses dari mana saja.
+    </p>
+
+    <h3>3.3.1 Membuat Repository Baru di GitHub</h3>
+    <div class="step-box">
+        <strong>Langkah-langkah:</strong>
+        <ol>
+            <li>Login ke akun GitHub di <span class="code-inline">https://github.com</span></li>
+            <li>Klik tombol <strong>"+"</strong> di pojok kanan atas, lalu pilih <strong>"New repository"</strong></li>
+            <li>Isi informasi repository:
+                <ul>
+                    <li><strong>Repository name:</strong> <span class="code-inline">hello-world-project</span></li>
+                    <li><strong>Description:</strong> Project Hello World - Tugas Pekan 9</li>
+                    <li><strong>Visibility:</strong> Public</li>
+                    <li><strong>Jangan</strong> centang "Add a README file" (karena kita sudah punya)</li>
+                </ul>
+            </li>
+            <li>Klik tombol <strong>"Create repository"</strong></li>
+        </ol>
+    </div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Halaman pembuatan repository baru di GitHub]
+    </div>
+
+    <h3>3.3.2 Menghubungkan Repository Lokal dengan GitHub</h3>
+    <p>
+        Setelah repository dibuat di GitHub, kita perlu menghubungkan repository lokal dengan repository remote di GitHub. Jalankan perintah berikut di terminal:
+    </p>
+    <div class="code-block">$ git remote add origin https://github.com/[username]/hello-world-project.git
+$ git branch -M main</div>
+
+    <p class="no-indent"><strong>Penjelasan:</strong></p>
+    <ul>
+        <li><span class="code-inline">git remote add origin</span> — Menambahkan remote repository dengan nama "origin" yang mengarah ke URL repository GitHub</li>
+        <li><span class="code-inline">git branch -M main</span> — Mengubah nama branch utama menjadi "main"</li>
+    </ul>
+
+    <h3>3.3.3 Push ke GitHub</h3>
+    <p>
+        Langkah terakhir adalah melakukan push untuk mengunggah semua commit dari repository lokal ke GitHub:
+    </p>
+    <div class="code-block">$ git push -u origin main</div>
+
+    <p>
+        Flag <span class="code-inline">-u</span> (upstream) digunakan untuk mengatur branch tracking sehingga pada push berikutnya cukup menggunakan <span class="code-inline">git push</span> saja.
+    </p>
+
+    <div class="code-block">Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 2.15 KiB | 2.15 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/[username]/hello-world-project.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.</div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Hasil perintah git push di terminal]
+    </div>
+
+    <h3>3.3.4 Verifikasi di GitHub</h3>
+    <p>
+        Setelah push berhasil, buka browser dan kunjungi repository GitHub Anda untuk memverifikasi bahwa semua file telah terunggah dengan benar.
+    </p>
+    <div class="step-box">
+        <strong>Verifikasi:</strong>
+        <ol>
+            <li>Buka <span class="code-inline">https://github.com/[username]/hello-world-project</span></li>
+            <li>Pastikan semua file (index.html, script.js, README.md, .gitignore) terlihat</li>
+            <li>Periksa commit history untuk memastikan commit tercatat</li>
+        </ol>
+    </div>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Tampilan repository di GitHub setelah push berhasil]
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== BAB 4: EVALUASI ==================== -->
+    <h1>BAB 4 - EVALUASI</h1>
+
+    <h2>4.1 Tampilan Project di Komputer Lokal</h2>
+    <p>
+        Berikut adalah tampilan project source code Hello World ketika dijalankan di komputer lokal melalui browser. Halaman web menampilkan pesan "Hello, World!" dengan desain modern menggunakan efek glassmorphism dan gradient warna.
+    </p>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Tampilan Hello World di browser - Local]
+    </div>
+
+    <h2>4.2 Tampilan Project di GitHub</h2>
+    <p>
+        Berikut adalah tampilan project source code Hello World yang telah berhasil di-push ke repository GitHub. Repository menampilkan semua file project beserta README yang telah ter-render.
+    </p>
+
+    <div class="screenshot-placeholder">
+        📸 [Screenshot: Tampilan repository Hello World di GitHub]
+    </div>
+
+    <h2>4.3 Penjelasan Proses</h2>
+    <p>
+        Berikut adalah ringkasan alur proses yang telah dilakukan dalam project ini:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Tahapan</th>
+                <th>Perintah / Aksi</th>
+                <th>Penjelasan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td>Persiapan</td>
+                <td>Install VS Code, Git, Buat Akun GitHub</td>
+                <td>Menyiapkan semua tools dan akun yang diperlukan</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">2</td>
+                <td>Buat Project</td>
+                <td>Membuat file index.html, script.js, README.md</td>
+                <td>Menulis source code Hello World menggunakan HTML, CSS, dan JavaScript</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td>Git Init</td>
+                <td><span class="code-inline">git init</span></td>
+                <td>Menginisialisasi folder project sebagai Git repository</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">4</td>
+                <td>Git Add</td>
+                <td><span class="code-inline">git add .</span></td>
+                <td>Menambahkan semua file ke staging area</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td>Git Commit</td>
+                <td><span class="code-inline">git commit -m "..."</span></td>
+                <td>Menyimpan snapshot perubahan ke repository lokal</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">6</td>
+                <td>Buat Repo GitHub</td>
+                <td>New Repository di GitHub</td>
+                <td>Membuat repository baru di akun GitHub</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">7</td>
+                <td>Git Remote</td>
+                <td><span class="code-inline">git remote add origin [URL]</span></td>
+                <td>Menghubungkan repository lokal dengan GitHub</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">8</td>
+                <td>Git Push</td>
+                <td><span class="code-inline">git push -u origin main</span></td>
+                <td>Mengunggah kode dari lokal ke GitHub</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4.4 Diagram Alur Proses</h2>
+    <p>
+        Berikut adalah diagram yang menggambarkan alur kerja Git dari komputer lokal ke GitHub:
+    </p>
+
+    <div style="text-align: center; margin: 20px 0; font-family: 'Consolas', monospace; font-size: 10pt;">
+        <table style="margin: 0 auto; border: none; width: auto;">
+            <tr style="border: none;">
+                <td style="border: 2px solid #333; padding: 12px 20px; text-align: center; background: #e3f2fd; border-radius: 8px;">
+                    <strong>Working Directory</strong><br>
+                    <small>(File project Anda)</small>
+                </td>
+                <td style="border: none; padding: 10px; text-align: center; font-size: 14pt;">
+                    →<br><small>git add</small>
+                </td>
+                <td style="border: 2px solid #333; padding: 12px 20px; text-align: center; background: #fff3e0; border-radius: 8px;">
+                    <strong>Staging Area</strong><br>
+                    <small>(Siap di-commit)</small>
+                </td>
+                <td style="border: none; padding: 10px; text-align: center; font-size: 14pt;">
+                    →<br><small>git commit</small>
+                </td>
+                <td style="border: 2px solid #333; padding: 12px 20px; text-align: center; background: #e8f5e9; border-radius: 8px;">
+                    <strong>Local Repository</strong><br>
+                    <small>(Commit tersimpan)</small>
+                </td>
+                <td style="border: none; padding: 10px; text-align: center; font-size: 14pt;">
+                    →<br><small>git push</small>
+                </td>
+                <td style="border: 2px solid #333; padding: 12px 20px; text-align: center; background: #fce4ec; border-radius: 8px;">
+                    <strong>Remote (GitHub)</strong><br>
+                    <small>(Online/Cloud)</small>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== BAB 5: KESIMPULAN ==================== -->
+    <h1>BAB 5 - KESIMPULAN</h1>
+
+    <p>
+        Berdasarkan project yang telah dilakukan, dapat disimpulkan bahwa:
+    </p>
+    <ol>
+        <li>Project Hello World berhasil dibuat menggunakan HTML, CSS, dan JavaScript. Halaman web menampilkan pesan "Hello, World!" dengan desain modern yang menggunakan efek glassmorphism dan gradient warna.</li>
+        <li>Git repository berhasil diinisialisasi pada folder project lokal menggunakan perintah <span class="code-inline">git init</span>, dan semua file berhasil di-commit menggunakan perintah <span class="code-inline">git commit</span>.</li>
+        <li>Source code berhasil di-push ke repository GitHub menggunakan perintah <span class="code-inline">git push</span>, sehingga kode dapat diakses secara online dan tersimpan di cloud.</li>
+        <li>Melalui project ini, pemahaman mengenai alur kerja Git (add → commit → push) dan penggunaan GitHub sebagai platform hosting repository semakin meningkat.</li>
+        <li>Version control system seperti Git sangat penting dalam pengembangan perangkat lunak karena memungkinkan pelacakan perubahan, kolaborasi tim, dan backup kode secara efektif.</li>
+    </ol>
+
+    <br>
+    <div class="note-box">
+        <strong>Catatan:</strong> Ganti semua teks dalam tanda kurung siku [seperti ini] dengan informasi yang sesuai (nama, NIM, username GitHub, dll). Tambahkan screenshot pada setiap bagian yang ditandai dengan placeholder 📸.
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <div class="footer">
+        <p class="no-indent">Laporan Project Pekan 9 — Hello World Project</p>
+        <p class="no-indent">© 2026 - Dibuat untuk memenuhi tugas mata kuliah</p>
+    </div>
+
+    <script>
+        // Auto-fill tanggal
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('tanggal').textContent = now.toLocaleDateString('id-ID', options);
+    </script>
+
+</body>
+</html>
